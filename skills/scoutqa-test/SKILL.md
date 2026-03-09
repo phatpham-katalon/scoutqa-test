@@ -88,10 +88,19 @@ See "Presenting Results" section below for the complete format.
 
 ### Command Options (create-execution)
 
-- `--url` (required): Website URL to test
+- `--url` (required): Website URL to test (supports `localhost` / `127.0.0.1`)
 - `--prompt` (required): Natural language testing instructions
 - `--project-id` (optional): Associate with a project for tracking
 - `-v, --verbose` (optional): Show all tool calls including internal ones
+
+### Local Testing Support
+
+ScoutQA supports testing `localhost` and `127.0.0.1` URLs autonomously — no manual setup required.
+
+```bash
+# Seamlessly test a locally running app when you're developing your app
+scoutqa --url "http://localhost:3000" --prompt "Test the registration form"
+```
 
 ### When to Use Each Command
 
